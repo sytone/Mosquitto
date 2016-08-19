@@ -11,3 +11,5 @@ sudo docker pull ansi/mosquitto
 Run it
 ======
 sudo docker run -p 1883:1883 --name mosquitto -d ansi/mosquitto
+
+- Added volume mount to the config in etc. 
