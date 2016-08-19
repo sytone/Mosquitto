@@ -20,10 +20,10 @@ RUN wget http://mosquitto.org/files/source/mosquitto-1.4.9.tar.gz && tar -xzvf .
 WORKDIR /usr/local/src/mosquitto-1.4.9
 RUN make && make install && /sbin/ldconfig
 RUN adduser --system --disabled-password --disabled-login mosquitto
-RUN chown -R mosquitto:mosquitto /etc/mosquitto
+#RUN chown -R mosquitto:mosquitto /etc/mosquitto
 
 # Volume configuration
-VOLUME ["/etc/mosquitto"]
+#VOLUME ["/etc/mosquitto"]
 
 USER mosquitto
 EXPOSE 1883
